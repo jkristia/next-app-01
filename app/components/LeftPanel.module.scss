@@ -1,0 +1,22 @@
+.leftPanel {
+    width: 200px;
+    color: #071c47ff;
+    background: #b88686ff;
+    padding: 1rem;
+    border-right: 1px solid #ccc;
+}
+
+.nav {
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    a {
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
