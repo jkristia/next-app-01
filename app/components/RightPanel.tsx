@@ -1,7 +1,8 @@
 import styles from './RightPanel.module.scss';
-import type { Store } from '../store/store';
+import { getStore } from '../store/store';
 
-export default function RightPanel({ store }: { store: Store }) {
+export default async function RightPanel() {
+    const store = await getStore();
     return (
         <aside className={styles.rightPanel}>
             <h3>Right Panel</h3>

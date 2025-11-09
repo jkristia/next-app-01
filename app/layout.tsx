@@ -6,22 +6,20 @@ import LeftPanel from './components/LeftPanel';
 import ContentWrapper from './components/ContentWrapper';
 import RightPanel from './components/RightPanel';
 import Footer from './components/Footer';
-import { getStore } from './store/store';
 
 export default async function RootLayout({ children }: { children: ReactNode }) {
-  const store = await getStore();
   return (
     <html lang="en">
       <body>
-        <Header store={store} />
+        <Header />
         <main className="mainLayout">
           <div className="layoutContainer">
-            <LeftPanel store={store} />
-            <ContentWrapper store={store}>{children}</ContentWrapper>
-            <RightPanel store={store} />
+            <LeftPanel />
+            <ContentWrapper>{children}</ContentWrapper>
+            <RightPanel />
           </div>
         </main>
-        <Footer store={store} />
+        <Footer />
       </body>
     </html>
   );

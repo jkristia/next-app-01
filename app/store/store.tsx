@@ -1,4 +1,5 @@
 // Server-side store: provide configuration and data loaders for Server Components
+import { cache } from 'react';
 
 // Define the config object type
 export interface Config {
@@ -25,7 +26,8 @@ export class Store {
 const _store = new Store();
 
 // In a real app this could read from DB, file, env, or remote API.
-export async function getStore(): Promise<Store> {
+// this cache is only per request, each request has a clean cache
+export const getStore = cache(async (): Promise<Store> => {
   // Simulate async server work; replace with real data access as needed
   return _store;
-}
+});

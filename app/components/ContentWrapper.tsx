@@ -1,8 +1,9 @@
 import type { ReactNode } from 'react';
 import styles from './ContentWrapper.module.scss';
-import type { Store } from '../store/store';
+import { getStore } from '../store/store';
 
-export default function ContentWrapper({ children, store }: { children: ReactNode; store: Store }) {
+export default async function ContentWrapper({ children }: { children: ReactNode }) {
+    const store = await getStore();
     return (
         <main className={styles.content}>
             <div className={styles.storeLabel}>propA: {store.config.propA}</div>

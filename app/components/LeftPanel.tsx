@@ -1,8 +1,9 @@
 import Link from 'next/link';
 import styles from './LeftPanel.module.scss';
-import type { Store } from '../store/store';
+import { getStore } from '../store/store';
 
-export default function LeftPanel({ store }: { store: Store }) {
+export default async function LeftPanel() {
+    const store = await getStore();
     return (
         <aside className={styles.leftPanel}>
             <h3>Left Panel</h3>
