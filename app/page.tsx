@@ -1,6 +1,6 @@
 // app/page.tsx
 import { getStore } from './store/store';
-import PropBEditor from './components/PropBEditor';
+import HomePageConfigForm from './components/HomePageConfigForm';
 import styles from './page.module.scss';
 
 export default async function HomePage() {
@@ -9,8 +9,9 @@ export default async function HomePage() {
     <div>
       <div>HomePage</div>
       <p>root overview page</p>
-      <div className={styles.propB}>Current propB: {store.config.propB}</div>
-      <PropBEditor initial={store.config.propB} />
+      <div className={styles.propB}>Current propB: {store.config.settings.propB}</div>
+      <div className={styles.propB}>Current check: {store.config.settings.check ? 'true' : 'false'}</div>
+      <HomePageConfigForm currentSettings={store.config.settings} />
     </div>
   );
 }

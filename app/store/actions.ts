@@ -2,12 +2,14 @@
 
 import { revalidatePath } from 'next/cache';
 import { getStore } from './store';
+import type { Settings } from './store';
 
-// Server Action: Update config.propB and revalidate the home path to reflect changes
-export async function updatePropBAction(formData: FormData) {
-    const value = String(formData.get('propB') ?? '');
+// Unified Server Action: Update any subset of Settings and revalidate the home path
+// Pass a partial Settings object; unspecified keys remain unchanged.
+export async function updateSettingsAction(settings: Partial<Settings>) {
     const store = await getStore();
-    store.config.propB = value;
-    // Revalidate the home page so server components read the updated value
+    // Merge incoming settings with existing ones
+    store.config.settings = { ...store.config.settings, ...settings };
+    // Revalidate the home page so server components read the updated values
     revalidatePath('/');
 }

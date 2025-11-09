@@ -2,14 +2,21 @@
 import { cache } from 'react';
 
 // Define the config object type
+export interface Settings {
+  propB: string;
+  check: boolean;
+}
 export interface Config {
   time: string;
-  propB: string;
+  settings: Settings;
 }
 
 const defaultConfig: Config = {
   time: 'defaultA',
-  propB: 'defaultB',
+  settings: {
+    propB: 'defaultB',
+    check: false,
+  }
 };
 
 export class Store {
