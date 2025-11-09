@@ -7,7 +7,8 @@ export default async function LeftPanel() {
     return (
         <aside className={styles.leftPanel}>
             <h3>Left Panel</h3>
-            <div className={styles.storeLabel}>propA: {store.config.propA}</div>
+            <div className={styles.storeLabel}>propA: {store.config.time}</div>
+            <div className={styles.storeLabel}>propB: {store.config.propB}</div>
             <nav className={styles.nav}>
                 <ul>
                     <li><Link href="/">Overview</Link></li>

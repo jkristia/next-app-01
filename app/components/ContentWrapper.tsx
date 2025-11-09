@@ -6,7 +6,8 @@ export default async function ContentWrapper({ children }: { children: ReactNode
     const store = await getStore();
     return (
         <main className={styles.content}>
-            <div className={styles.storeLabel}>propA: {store.config.propA}</div>
+            <div>ContentWrapper</div>
+            <div className={styles.storeLabel}>propA: {store.config.time}</div>
             {children}
         </main>
     );

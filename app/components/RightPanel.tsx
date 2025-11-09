@@ -6,7 +6,7 @@ export default async function RightPanel() {
     return (
         <aside className={styles.rightPanel}>
             <h3>Right Panel</h3>
-            <div className={styles.storeLabel}>propA: {store.config.propA}</div>
+            <div className={styles.storeLabel}>propA: {store.config.time}</div>
             <p>Contextual info or help</p>
         </aside>
     );

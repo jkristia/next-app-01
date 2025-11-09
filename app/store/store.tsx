@@ -3,12 +3,12 @@ import { cache } from 'react';
 
 // Define the config object type
 export interface Config {
-  propA: string;
+  time: string;
   propB: string;
 }
 
 const defaultConfig: Config = {
-  propA: 'defaultA',
+  time: 'defaultA',
   propB: 'defaultB',
 };
 
@@ -29,5 +29,6 @@ const _store = new Store();
 // this cache is only per request, each request has a clean cache
 export const getStore = cache(async (): Promise<Store> => {
   // Simulate async server work; replace with real data access as needed
+  _store.config.time = new Date().toLocaleTimeString()
   return _store;
 });

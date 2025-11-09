@@ -7,7 +7,7 @@ export default async function Header() {
     return (
         <header className={clsx(styles.header, styles.secondary)}>
             <h1>My App Header</h1>
-            <div className={styles.storeLabel}>propA: {store.config.propA}</div>
+            <div className={styles.storeLabel}>propA: {store.config.time}</div>
         </header>
     );
 }

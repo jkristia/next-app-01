@@ -6,7 +6,7 @@ export default async function Footer() {
     return (
         <footer className={styles.footer}>
             Footer  2025
-            <div className={styles.storeLabel}>propA: {store.config.propA}</div>
+            <div className={styles.storeLabel}>propA: {store.config.time}</div>
         </footer>
     );
 }
