@@ -15,12 +15,9 @@ https://nextjs.org/docs.
 | route group e.g. `/app/(main)/portal/page.tsc | `/portal` |
 
 
+Material UI
+https://mui.com/material-ui/integrations/nextjs/
 
-
-
-
-
-This is generated mostly with github CoPilot
 
 ## Testing
 
