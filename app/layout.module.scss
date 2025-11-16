@@ -1,0 +1,16 @@
+.rootLayout {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: green;
+
+    .content {
+        margin: 10px;
+        height: 100%;
+        background-color: rgb(153, 15, 15);
+    }
+}

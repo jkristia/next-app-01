@@ -4,9 +4,23 @@
 
 This project is just a playground to try out Next.js and experiment with its features.  
 
-https://nextjs.org/docs/app/getting-started/installation. 
+https://nextjs.org/docs/app/getting-started/installation.  
 https://nextjs.org/learn.  
 https://nextjs.org/docs.  
+
+[Routing](https://nextjs.org/docs/app/getting-started/project-structure#routing-files) documentation.   
+[Route group](https://nextjs.org/docs/app/getting-started/project-structure#route-groups-and-private-folders)
+| | |
+|-|-|
+| route group e.g. `/app/(main)/portal/page.tsc | `/portal` |
+
+
+
+
+
+
+
+This is generated mostly with github CoPilot
 
 ## Testing
 
