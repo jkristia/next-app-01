@@ -1,8 +1,10 @@
+// https://mui.com/material-ui/react-tabs/
 'use client';
 
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { Tabs, Tab, Box } from '@mui/material';
+import '../common.styles.scss';
 
 enum MainRoutes {
     HOME = '/',
@@ -21,7 +23,7 @@ export default function MainNavigation() {
     };
 
     return (
-        <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+        <Box className="bottom-border">
             <Tabs value={getCurrentTab()} aria-label="navigation tabs">
                 <Tab label="Home" value={MainRoutes.HOME} component={Link} href={MainRoutes.HOME} />
                 <Tab label="Tab1" value={MainRoutes.TAB1} component={Link} href={MainRoutes.TAB1} />
